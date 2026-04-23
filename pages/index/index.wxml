@@ -1,2 +1,36 @@
 <!-- 微信小程序 Web-View 容器 -->
-<web-view src="{{webUrl}}"></web-view>
+<scroll-view scroll-y class="container">
+  <!-- 头部 Hero 区域 -->
+  <view class="hero">
+    <view class="name">WANG RUIXI</view>
+    <view class="title">王睿熙 | 交互设计师 & 开发者</view>
+    <view class="intro shadow-text">用设计连接技术，用代码实现创意。</view>
+  </view>
+
+  <!-- 作品展示区 -->
+  <view class="section">
+    <view class="section-title">精选作品 PORTFOLIO</view>
+    
+    <view class="project-card" wx:for="{{projects}}" wx:key="id">
+      <view class="project-info">
+        <view class="project-tag">{{item.tag}}</view>
+        <view class="project-name">{{item.name}}</view>
+        <view class="project-desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 技能列表 -->
+  <view class="section">
+    <view class="section-title">核心技能 SKILLS</view>
+    <view class="skill-grid">
+      <view class="skill-item" wx:for="{{skills}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 联系方式 -->
+  <view class="footer">
+    <view class="contact-btn" bindtap="copyEmail">复制邮箱联系我</view>
+    <view class="copyright">© 2026 Wang Ruixi. Built with Native MiniProgram.</view>
+  </view>
+</scroll-view>
