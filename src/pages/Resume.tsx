@@ -1,20 +1,13 @@
-import { useState } from 'react';
 import { Layout } from '../components/Layout';
-import { Printer, ArrowLeft } from 'lucide-react';
+import { Download, Printer, ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Resume() {
   const navigate = useNavigate();
-  const [tip, setTip] = useState('');
 
   const handleDownload = () => {
-    if (typeof window !== 'undefined' && typeof window.print === 'function') {
-      window.print();
-      return;
-    }
-
-    setTip('当前环境不支持系统打印，请在浏览器中打开后导出 PDF。');
+    window.print();
   };
 
   return (
@@ -35,12 +28,6 @@ export default function Resume() {
             <Printer size={18} /> 打印 / 另存为 PDF
           </button>
         </div>
-
-        {tip && (
-          <p className="mb-6 rounded-lg border border-outline-variant/40 bg-surface-container-low px-4 py-3 text-xs text-on-surface-variant print:hidden">
-            {tip}
-          </p>
-        )}
 
         {/* Paper Sheet */}
         <motion.div 
