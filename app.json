@@ -8,5 +8,6 @@
     "navigationBarTextStyle": "black",
     "backgroundTextStyle": "light"
   },
+  "lazyCodeLoading": "requiredComponents",
   "sitemapLocation": "sitemap.json"
 }

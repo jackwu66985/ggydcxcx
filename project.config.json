@@ -11,7 +11,9 @@
     "es6": true,
     "enhance": true,
     "postcss": true,
-    "minified": true
+    "minified": true,
+    "lazyCodeLoading": true,
+    "coverView": true
   },
   "compileType": "miniprogram",
   "libVersion": "latest",
