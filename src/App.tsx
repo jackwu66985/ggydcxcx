@@ -11,12 +11,10 @@ import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
 import SustainableFurniture from './pages/SustainableFurniture';
 import SmartHomeHub from './pages/SmartHomeHub';
-import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
