@@ -1,9 +1,15 @@
 {
-  "description": "项目配置文件",
+  "description": "微信小程序项目配置文件",
+  "miniprogramRoot": "./",
   "packOptions": {
     "ignore": [
       { "type": "folder", "value": "node_modules" },
-      { "type": "folder", "value": "src" }
+      { "type": "folder", "value": "src" },
+      { "type": "file", "value": "index.html" },
+      { "type": "file", "value": "vite.config.ts" },
+      { "type": "file", "value": "tsconfig.json" },
+      { "type": "file", "value": "metadata.json" },
+      { "type": "file", "value": ".env.example" }
     ]
   },
   "setting": {

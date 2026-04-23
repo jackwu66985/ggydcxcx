@@ -1,14 +1,20 @@
+page {
+  background-color: #f9f7f2;
+  color: #1a1a1a;
+}
+
 .container {
   height: 100vh;
-  background-color: #F9F7F2;
-  color: #1A1A1A;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9f7f2;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 .hero {
   padding: 120rpx 40rpx;
-  background-color: #1A1A1A;
-  color: #F9F7F2;
+  background-color: #1a1a1a;
+  color: #f9f7f2;
 }
 
 .name {
@@ -45,9 +51,9 @@
 }
 
 .project-card {
-  background: white;
+  background: #fff;
   margin-bottom: 40rpx;
-  border: 1rpx solid #EEE;
+  border: 1rpx solid #eee;
   padding: 40rpx;
 }
 
@@ -72,33 +78,44 @@
 .skill-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20rpx;
+  margin: -10rpx;
 }
 
 .skill-item {
-  background: #EEE;
+  background: #eee;
   padding: 16rpx 32rpx;
   font-size: 26rpx;
   border-radius: 4rpx;
+  margin: 10rpx;
 }
 
 .footer {
   padding: 100rpx 40rpx;
   text-align: center;
-  border-top: 1rpx solid #EEE;
+  border-top: 1rpx solid #eee;
 }
 
 .contact-btn {
-  background: #1A1A1A;
-  color: white;
+  background: #1a1a1a;
+  color: #fff;
   display: inline-block;
   padding: 30rpx 60rpx;
   font-size: 30rpx;
   font-weight: 600;
   margin-bottom: 40rpx;
+  line-height: 1;
+  border-radius: 0;
+}
+
+.contact-btn::after {
+  border: none;
+}
+
+.safe-bottom {
+  padding-bottom: calc(100rpx + env(safe-area-inset-bottom));
 }
 
 .copyright {
   font-size: 22rpx;
-  color: #AAA;
+  color: #aaa;
 }
