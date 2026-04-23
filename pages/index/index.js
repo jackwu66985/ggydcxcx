@@ -1,9 +1,9 @@
 Page({
   data: {
-    // 使用公开的预览地址，确保在移动端 WebView 中无需额外授权即可访问
-    webUrl: "https://ais-pre-khdnscp4scj67e2oxa7gf6-660100968238.asia-east1.run.app/"
+    // 换回开发实时地址，这是目前最稳定的连接
+    webUrl: "https://ais-dev-khdnscp4scj67e2oxa7gf6-660100968238.asia-east1.run.app"
   },
   onLoad: function() {
-    console.log("作品集 WebView 加载中...");
+    console.log("正在通过开发通道加载作品集...");
   }
 })

@@ -13,7 +13,14 @@
     "postcss": true,
     "minified": true,
     "lazyCodeLoading": true,
-    "coverView": true
+    "coverView": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
   },
   "compileType": "miniprogram",
   "libVersion": "latest",

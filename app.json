@@ -9,5 +9,6 @@
     "backgroundTextStyle": "light"
   },
   "lazyCodeLoading": "requiredComponents",
+  "checkSiteMap": false,
   "sitemapLocation": "sitemap.json"
 }
