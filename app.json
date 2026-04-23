@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F9F7F2",
+    "navigationBarTitleText": "王睿熙 | 作品集",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json"
+}
