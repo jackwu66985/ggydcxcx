@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+
+  --color-primary: #6f583c;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #897052;
+  --color-on-primary-container: #fffbff;
+  
+  --color-background: #fbf9f8;
+  --color-on-background: #1b1c1c;
+  
+  --color-surface: #fbf9f8;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #4e453c;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f3;
+  --color-surface-container: #efeded;
+  --color-surface-container-high: #eae8e7;
+  --color-surface-container-highest: #e4e2e2;
+  
+  --color-outline: #7f756b;
+  --color-outline-variant: #d1c4b9;
+  
+  --color-tertiary-fixed: #e6e2da;
+  --color-on-tertiary-fixed-variant: #484741;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background antialiased font-sans select-none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  button, a {
+    @apply cursor-pointer;
+    touch-action: manipulation;
+  }
+}
+
+/* Custom spacing and shadows as per design spec */
+.shadow-ambient {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-level-2 {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-level-3 {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.pb-safe {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.pt-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
