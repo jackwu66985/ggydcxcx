@@ -1,0 +1,17 @@
+{
+  "description": "WeChat Mini Program wrapper for the React H5 portfolio",
+  "appid": "wx8fe77b141b8019f6",
+  "projectname": "ggydcxcx",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "./",
+  "srcMiniprogramRoot": "./",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "simulatorType": "wechat",
+  "condition": {}
+}

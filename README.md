@@ -50,3 +50,20 @@ View your app in AI Studio: https://ai.studio/apps/8cc75246-61ac-4a71-a34e-8ed9c
 - `pages/webview/index.*`
 
 打开小程序后会默认进入 `pages/webview/index`，并加载 `app.js` 中的 `webAppBaseUrl`。请将其替换为你自己的线上 HTTPS 地址（且已加入微信后台业务域名白名单）。
+
+
+### 真机调试仍提示“未找到 app.json”时
+
+如果你本地明明有 `app.json`，但微信开发者工具/真机调试仍报错，通常是**项目根目录选错**导致的。
+
+请确认：
+
+1. 导入微信开发者工具时，选择的目录是本仓库根目录（即包含 `project.config.json` 与 `app.json` 的目录）。
+2. `project.config.json` 中 `miniprogramRoot` 为 `./`。
+3. 不要把 `src/` 当成小程序目录导入（`src/` 是 React H5 源码，不是小程序入口）。
+
+可通过以下命令自检：
+
+```bash
+ls app.json project.config.json pages/webview/index.wxml
+```
