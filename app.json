@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/webview/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "作品集",
+    "navigationBarBackgroundColor": "#F9F7F2",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FBF9F8"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
