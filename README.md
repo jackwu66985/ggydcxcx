@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 微信小程序版本：王睿熙作品集
 
-# Run and deploy your AI Studio app
+本仓库已整理为可直接在 **微信开发者工具** 运行的原生小程序项目。
 
-This contains everything you need to run your app locally.
+## 目录说明
 
-View your app in AI Studio: https://ai.studio/apps/8cc75246-61ac-4a71-a34e-8ed9cd48469f
+- `app.js` / `app.json`：全局小程序配置。
+- `pages/index/*`：首页页面逻辑、模板与样式。
+- `project.config.json`：微信开发者工具工程配置（已配置忽略 Web 端文件）。
+- `src/*`：历史 Web 端 React 代码，已在小程序打包中忽略，不影响小程序运行。
 
-## Run Locally
+## 在微信开发者工具中运行
 
-**Prerequisites:**  Node.js
+1. 打开微信开发者工具（建议稳定版，基础库 `latest`）。
+2. 选择「导入项目」，目录指向本仓库根目录。
+3. 使用 `project.config.json` 中的 `appid`（或你自己的测试号 AppID）。
+4. 点击「编译」即可运行首页。
 
+## 已做的小程序适配
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- 首页交互全部使用原生小程序能力（`Page` / `wx.setClipboardData` / 分享接口）。
+- 按钮改为 `<button>`，兼容触控反馈与可访问性。
+- 样式增加 iPhone 底部安全区适配。
+- 移除了对 `gap` 的依赖，改为 `margin` 布局，提升低版本兼容性。
+
+## 常见问题
+
+- 若提示 `appid` 无权限：请在开发者工具切换为你自己的测试号 AppID。
+- 若首次导入卡顿：属于开发者工具索引缓存行为，重新编译一次即可。
